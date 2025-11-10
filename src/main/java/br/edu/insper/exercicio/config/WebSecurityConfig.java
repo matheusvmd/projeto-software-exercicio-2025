@@ -47,7 +47,7 @@ public class WebSecurityConfig implements WebMvcConfigurer {
         JwtGrantedAuthoritiesConverter converter = new JwtGrantedAuthoritiesConverter();
 
         // Nome do claim que contém as roles (ajuste se o claim no seu token possuir outro nome)
-        converter.setAuthoritiesClaimName("roles");
+        converter.setAuthoritiesClaimName("https://myapp.example/roles");
         // prefixo para ficar no formato ROLE_ADMIN etc.
         converter.setAuthorityPrefix("ROLE_");
 
